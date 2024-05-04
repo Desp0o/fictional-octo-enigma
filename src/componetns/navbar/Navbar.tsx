@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import logo from "../../assets/logo.webp";
 import "./navbar.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ResMenu from "../slider/ResMenu";
 
 const Navbar = () => {
@@ -10,6 +10,10 @@ const Navbar = () => {
   const handleBurgerMenu = () => {
     setOpen(!isOpen);
   };
+
+  useEffect(()=>{
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+  },[isOpen])
 
   return (
     <>
