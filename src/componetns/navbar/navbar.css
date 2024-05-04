@@ -23,9 +23,8 @@
 .navbar_inner{
     width: 100%;
     height: 90px;
-    max-width: 1440px;
 
-    padding: 0 160px;
+    padding: 0 80px;
     margin: 0 auto;
 
     display: flex;
@@ -39,4 +38,29 @@
     display: flex;
     align-items: center;
     gap: 50px;
+}
+
+/* burger menu */
+.burger_menu{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    width: 20px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.stick1,
+.stick2,
+.stick3{
+    width: 100%;
+    height: 2px;
+    background-color: var(--text-color);
+}
+
+@media (max-width:1200px) {
+    .navbar_links{
+        display: none;
+    }
 }

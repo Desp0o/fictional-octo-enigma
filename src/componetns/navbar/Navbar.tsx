@@ -4,7 +4,7 @@ import "./navbar.css"
 
 const Navbar = () => {
   return (
-      <div className="navbar">
+      <nav className="navbar">
         <div className="navbar_conatct"></div>
 
         <div className="navbar_inner">
@@ -21,8 +21,18 @@ const Navbar = () => {
                     <Link to={''}>პროექტები</Link>
                     <Link to={''}>კონტაქტი</Link>
                 </div>
+
+                {
+                    window.innerWidth < 1200
+                    &&
+                    <div className="burger_menu">
+                        <span className="stick1"/>
+                        <span className="stick2"/>
+                        <span className="stick3"/>
+                    </div>
+                }
             </div>
-        </div>
+        </nav>
   )
 }
 
