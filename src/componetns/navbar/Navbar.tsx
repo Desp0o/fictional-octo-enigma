@@ -1,8 +1,16 @@
 import { Link } from "react-router-dom"
 import logo from "../../assets/logo.webp"
 import "./navbar.css"
+import { useState } from "react"
 
 const Navbar = () => {
+  const [isOpen, setOpen] = useState(false)
+
+  const handleBurgerMenu = () => {
+    setOpen(!isOpen)    
+  }
+
+
   return (
       <nav className="navbar">
         <div className="navbar_conatct"></div>
@@ -25,9 +33,9 @@ const Navbar = () => {
                 {
                     window.innerWidth < 1200
                     &&
-                    <div className="burger_menu">
+                    <div className="burger_menu" onClick={handleBurgerMenu}>
                         <span className="stick1"/>
-                        <span className="stick2"/>
+                        <span className={isOpen ? "stick2 opened" : "stick2"}/>
                         <span className="stick3"/>
                     </div>
                 }
