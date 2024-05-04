@@ -1,3 +1,9 @@
+*,*::after,*::before{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 
@@ -5,12 +11,14 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  --main-color: #FFB000;
+  --text-color: #213547;
 }
 
-
-
 body {
-  
+  width: 100%;
+  min-height: 100vh;
 }
 
 
