@@ -6,7 +6,7 @@
     position: fixed;
     left: 0;
     top: 0;
-    z-index: 999;
+    z-index: 5;
 }
 
 .navbar_conatct{
@@ -57,16 +57,66 @@
     width: 100%;
     height: 2px;
     background-color: var(--text-color);
-    transition: all 0.3s ease;
+    transition: all 0.2s ease;
 }
 
 .stick2.opened{
     margin-left: -5px;
-    transition: all 0.3s ease;
+    transition: all 0.2s ease;
+}
+
+.ResMenu {
+    width: 260px;
+    height: 100%; /* Corrected typo "100svb" to "100px" */
+    background-color: #FCF8F5;
+
+    position: fixed;
+    z-index: 6;
+    top: 0;
+    right: -100%; /* Changed from -100% to -260px */
+    transition: all 0.4s ease;
+}
+
+.ResMenu.active {
+    right: 0; /* Changed from 0 to 260px */
+}
+
+
+.resMenu_backdrop{
+    width: 100%;
+    height: 100%;
+
+    position: fixed;
+    z-index: 6;
+    left: 0;
+    top: 0;
+    background-color: #000;
+    opacity: 0.5;
+
+    padding-top: 44px;
+}
+
+.close_icon_res{
+    position: absolute;
+    right: 20px;
+    top:22px;
+    cursor:pointer
 }
 
 @media (max-width:1200px) {
+    .navbar{
+        height: 90px;
+    }
     .navbar_links{
         display: none;
+    }
+    .navbar_conatct{
+        display: none;
+    }
+    .navbar_inner{
+        padding: 0 20px;
+    }
+    .main_logo{
+        width: 60px;
     }
 }
