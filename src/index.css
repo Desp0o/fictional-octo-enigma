@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: "BPG";
+  src: url("./assets/fonts/bpg-banner.woff");
+}
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 
@@ -31,6 +36,7 @@ a:hover{
 body {
   width: 100%;
   min-height: 100vh;
+  font-family: "BPG";
 }
 
 
