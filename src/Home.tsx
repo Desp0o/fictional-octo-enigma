@@ -1,7 +1,10 @@
+import Slidet from "./componetns/slider/Slidet"
 
 const Home = () => {
   return (
-    <div>Home</div>
+    <div>
+        <Slidet />
+    </div>
   )
 }
 
