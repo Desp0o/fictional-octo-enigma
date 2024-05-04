@@ -5,9 +5,10 @@ import SliderItem from "./SliderItem";
 const Slidet = () => {
   return (
     <div className="slider_container">
-      {sliderDataBase.map((item) => {
+      {sliderDataBase.map((item, index) => {
         return (
           <SliderItem 
+            key={index}
             title={""} 
             pathName={item.path} 
             coverImage={item.cover} 
