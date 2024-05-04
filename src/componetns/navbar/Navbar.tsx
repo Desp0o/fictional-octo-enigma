@@ -4,12 +4,14 @@ import "./navbar.css"
 
 const Navbar = () => {
   return (
-    <div className="navbar">
-        <div className="navbar_inner">
-            <div className="navbar_conatct"></div>
+      <div className="navbar">
+        <div className="navbar_conatct"></div>
 
-            <div className="navbar_contnet">
-                <img src={logo} alt="main logo" className="main_logo" />
+        <div className="navbar_inner">
+                
+                <Link to='/'>
+                    <img src={logo} alt="main logo" className="main_logo" />
+                </Link>
 
                 <div className="navbar_links">
                     <Link to={''}>მთავარი</Link>
@@ -21,7 +23,6 @@ const Navbar = () => {
                 </div>
             </div>
         </div>
-    </div>
   )
 }
 
